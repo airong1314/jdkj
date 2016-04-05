@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edeg,chorme=1">
+    <meta name="renderer" content="webkit">
+    <title>君农哥商城首页</title>
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/slick.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/slicktheme.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <base target="_blank">
+</head>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="content">
+            <div class="pull-left">君农哥电子商务平台</div>
+            <div class="pull-right">
+                <a href="">用户登录  </a>|<a href=""> 免费注册</a>
+            </div>
+        </div>
+    </div>
+    <!-- logo searchbox -->
+    <div class="content root">
+        <a href="">
+        <div class="bgico logo"></div>
+        </a>
+        <div class="searchbox">
+            <div class="search">
+                <span class="bgico"></span>
+                <input type="text" placeholder="请输入你要查询的关键字">
+                <button>搜索</button>
+            </div>
+            <div class="hotword">
+                <span>热门商品</span>
+                <a href="">南瓜</a>
+                <a class="blue" href="">白菜</a>
+                <a href="">西红柿</a>
+                <a href="">苹果</a>
+                <a class="blue" href="">玉米</a>
+                <a class="blue" href="">水果礼盒</a>
+                <a href="">干果</a>
+                <a href="">豆芽</a>
+            </div>
+        </div>
+        <div class="shopcart">
+            <span class="bgico inline-block"></span>
+            <p>购物车</p>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="nav">
+        <div class="content">
+            <a class="all" href="">所有商品</a>
+            <a href="">特价专区</a>
+            <a href="">礼品专区</a>
+            <a href="">名品特供</a>
+            <a href="">优质产地</a>
+            <a href="">认证溯源</a>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+    <!-- subnav -->
+        <div class="classification content">
+            <div class="category">
+                <ul>
+                    <li>
+                        <a class="first bgico" href=""></a>
+                        <p>分类一</p>
+                    </li>
+                    <li>
+                        <a class="second bgico" href=""></a>
+                        <p>分类二</p>
+                    </li>
+                    <li>
+                        <a class="third bgico" href=""></a>
+                        <p>分类三</p>
+                    </li>
+                    <li>
+                        <a class="fourth bgico" href=""></a>
+                        <p>分类四</p>
+                    </li>
+                    <li>
+                        <a class="fifth bgico" href=""></a>
+                        <p>分类五</p>
+                    </li>
+                    <li>
+                        <a class="sixth bgico" href=""></a>
+                        <p>分类六</p>
+                    </li>
+                    <li>
+                        <a class="seventh bgico" href=""></a>
+                        <p>分类七</p>
+                    </li>
+                    <li>
+                        <a class="eighth bgico" href=""></a>
+                        <p>分类八</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- By the picture -->
+        <div class="single-item" style="height: 420px">
+            <div style="background:#96ca1d;">
+                <img data-lazy="images/bannerone.jpg" alt="">
+            </div>
+            <div style="background: blue;">
+                <img data-lazy="images/bannerone.jpg" alt="">
+            </div>
+        </div>
+    </div>
+   <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+    <script>
+    $('.single-item').slick({
+        lazyLoad: 'ondemand',
+        autoplay: true,
+        dots: true,
+        fade: true
+    });
+    //set the classification positon
+   var diatance = $('.all').offset().left +'px';
+    $('.classification').css('left',''+diatance+'')
+   console.log('make by http://airong1314.github.io/')
+    </script>
+</body>
+
+</html> 

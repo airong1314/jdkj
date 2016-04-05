@@ -1,0 +1,371 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.breadcrumb {
+  height: 60px;
+  line-height: 60px;
+}
+.breadcrumb > li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 14px;
+  color: #999;
+}
+.breadcrumb > li.active {
+  color: #066e06;
+}
+.breadcrumb > li a {
+  color: #999;
+}
+
+.breadcrumb > li + li:before {
+  color: #ccc;
+  content: "/\00a0";
+}
+
+.inteminner {
+  width: 689px;
+  float: right;
+  display: inline;
+}
+.inteminner h1 {
+  font-size: 24px;
+  color: #333;
+}
+.inteminner p {
+  line-height: 24px;
+  font-size: 14px;
+  color: #066e06;
+}
+.inteminner .price {
+  width: 690px;
+  height: 90px;
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: #eee;
+}
+.inteminner .price ul li {
+  margin-left: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  line-height: 36px;
+  width: 140px;
+}
+.inteminner .price ul li span {
+  font-size: 18px;
+}
+.inteminner .price ul li b {
+  font-size: 30px;
+  color: #066e06;
+}
+
+.summary .dt {
+  line-height: 25px;
+}
+.summary .dt,
+.summary .dd {
+  float: left;
+  display: inline;
+}
+.summary .dd li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-left: 8px;
+}
+.summary .dd li.normal {
+  cursor: pointer;
+  line-height: 23px;
+  padding: 0 8px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #bdbdbd;
+}
+.summary .dd li.select {
+  height: 23px;
+  border: 1px solid #066e06;
+}
+.summary .dd li.select:after {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 25px;
+  height: 23px;
+  position: relative;
+  font-size: 16px;
+  left: 8px;
+  top: -1px;
+  content: '✔';
+  background-color: #066e06;
+  color: #fff;
+}
+.summary .dd span {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.summary .dd span.c-b {
+  height: 18px;
+  line-height: 14px;
+  color: #066e06;
+}
+
+.statistical {
+  padding-bottom: 18px;
+}
+.statistical .dd li {
+  margin-left: 0;
+}
+.statistical .dd li.m {
+  margin-left: 80px;
+}
+
+.logistics {
+  padding: 16px 0;
+}
+
+.specifications {
+  padding-top: 20px;
+}
+
+.grade {
+  padding: 18px 0;
+}
+
+.choose-amount .dd {
+  margin-left: 8px;
+}
+.choose-amount .dd span {
+  float: left;
+  display: inline;
+  text-align: center;
+}
+.choose-amount .dd span.mc {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #999;
+  color: #fff;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.choose-amount .dd span.number {
+  width: 56px;
+  height: 23px;
+  line-height: 23px;
+  background-color: #eee;
+  border: 1px solid #999;
+}
+.choose-amount .dd span.mr {
+  line-height: 25px;
+  margin-left: 4px;
+}
+
+.your-choose {
+  line-height: 40px;
+}
+
+.buy li {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  text-align: center;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.buy li.btn {
+  width: 173px;
+  height: 43px;
+  line-height: 43px;
+  font-size: 20px;
+  color: #fff;
+}
+.buy li.btn-r {
+  margin-top: 15px;
+  padding: 4px 8px;
+  background-color: #eee;
+  font-size: 14px;
+  color: #666;
+}
+.buy li.buy {
+  background-color: #f76100;
+}
+.buy li.order {
+  background-color: #ffa600;
+}
+
+.rooter {
+  margin-top: 15px;
+  height: 50px;
+  background-color: #eee;
+}
+.rooter label, .rooter input, .rooter span {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.rooter label {
+  line-height: 50px;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.rooter input {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.rooter input.text {
+  width: 335px;
+  height: 30px;
+  margin: 0 16px;
+}
+.rooter input.submit {
+  width: 105px;
+  height: 36px;
+  font-size: 16px;
+  border: none;
+  background-color: #066e06;
+  color: #fff;
+}
+.rooter span {
+  line-height: 50px;
+  margin-left: 28px;
+}
+
+.s {
+  height: 60px;
+  background-color: #eee;
+  margin: 16px auto;
+  line-height: 60px;
+}
+.s img {
+  margin-left: 22px;
+  vertical-align: middle;
+}
+
+.slider {
+  height: 272px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.slider .left, .slider .right {
+  position: absolute;
+  width: 33px;
+  height: 67px;
+  top: 50%;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.slider .left {
+  left: 0;
+}
+.slider .right {
+  right: 0;
+}
+.slider h2 {
+  width: 1160px;
+  margin: 0 auto;
+  line-height: 44px;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  color: #1e5b31;
+}
+
+.multiple-items {
+  width: 1072px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.multiple-items .item {
+  text-align: center;
+  height: 200px;
+}
+.multiple-items .item img {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+.multiple-items .item p {
+  width: 150px;
+  line-height: 28px;
+}
+.multiple-items .item p span {
+  font-size: 18px;
+  color: #066e06;
+}
