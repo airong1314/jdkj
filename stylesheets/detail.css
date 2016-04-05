@@ -273,7 +273,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 50px;
   background-color: #eee;
 }
-.rooter label, .rooter input, .rooter span {
+.rooter label,
+.rooter input,
+.rooter span {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -324,7 +326,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border: 1px solid #ccc;
   position: relative;
 }
-.slider .left, .slider .right {
+.slider .left,
+.slider .right {
   position: absolute;
   width: 33px;
   height: 67px;
@@ -368,4 +371,66 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .multiple-items .item p span {
   font-size: 18px;
   color: #066e06;
+}
+
+.reference {
+  margin-top: 10px;
+}
+.reference .left {
+  width: 905px;
+  height: 400px;
+}
+.reference .left .subnav {
+  background-color: #066e06;
+  height: 50px;
+  overflow: hidden;
+}
+.reference .left .subnav li {
+  float: left;
+  display: inline;
+  width: 127px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background-color: #519a51;
+  border-right: 1px solid #066e06;
+  cursor: pointer;
+  margin-top: 1px;
+}
+.reference .left .subnav li.select {
+  border-left: 1px solid #066e06;
+  background-color: #fff;
+  color: #7f7f7f;
+}
+.reference .left .container {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding-bottom: 24px;
+}
+.reference .left .container h4 {
+  color: #066e06;
+  font-size: 14px;
+  padding-top: 10px;
+  margin-left: 30px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.reference .left .container .text-content {
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 30px;
+}
+.reference .left .container .text-content li {
+  float: left;
+  display: inline;
+  width: 280px;
+  line-height: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #7f7f7f;
 }

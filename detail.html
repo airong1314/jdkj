@@ -196,8 +196,8 @@
         <img src="images/s.png" alt="">
     </div>
     <div class="content slider">
-    <div class="left"><img src="images/lclick.png" alt=""></div>
-    <div class="right"><img src="images/rclick.png" alt=""></div>
+        <div class="left"><img src="images/lclick.png" alt=""></div>
+        <div class="right"><img src="images/rclick.png" alt=""></div>
         <h2>推荐商品</h2>
         <div class="multiple-items">
             <div class="item">
@@ -242,41 +242,87 @@
             </div>
         </div>
     </div>
+    <div class="content reference clearfix">
+        <div class="pull-left left">
+            <!-- 左侧 -->
+            <div class="subnav clearfix">
+                <ul class="clearfix">
+                    <li class="select">商品信息</li>
+                    <li>商品详情</li>
+                    <li>认证溯源</li>
+                    <li>售后服务</li>
+                    <li>用户评价</li>
+                </ul>
+            </div>
+            <div class="container">
+                <h4>产品参数:</h4>
+                <div class="text-content">
+                    <ul>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                       <li>厂名：寻乌县水源红果品有限公司 </li>
+                                   </ul>               
+                </div>
+            </div>
+        </div>
+        <div class="pull-right right">
+            <!-- 右侧 -->
+        </div>
+    </div>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/tab.js"></script>
     <script>
-   var str = $('.mr').html();
-   var a = parseInt(str.match(/\d+/g).toString());
-   var number = parseInt($('.number').html());
-    if (!isNaN(number)&&number>=0) {
-      $('.sub').click(function(event) {
-         number--;
-        if (number<0) {
-           return false;
-        }
-       
-        $('.number').html(number);
-    });
-     $('.add').click(function(event) {
-        number++;
-        if (number>a) {
-            return false;
-        }
-        $('.number').html(number);
-    });
+    var str = $('.mr').html();
+   
+    var a = parseInt(str.match(/\d+/g).toString());
+    var number = parseInt($('.number').html());
+    if (!isNaN(number) && number >= 0) {
+        $('.sub').click(function(event) {
+            number--;
+            if (number < 0) {
+                return false;
+            }
 
-    }else{
+            $('.number').html(number);
+        });
+        $('.add').click(function(event) {
+            number++;
+            if (number > a) {
+                return false;
+            }
+            $('.number').html(number);
+        });
+
+    } else {
         throw new Error('参数错误')
     }
-  $('.normal').click(function(event) {
-       $(this).addClass('select');
-       $(this).siblings().removeClass('select');
+    $('.normal').click(function(event) {
+        $(this).addClass('select');
+        $(this).siblings().removeClass('select');
     });
     $('.left').click(function(event) {
-         $('.slick-prev').trigger('click')
+        $('.slick-prev').trigger('click')
     });
     $('.right').click(function(event) {
-         $('.slick-next').trigger('click')
+        $('.slick-next').trigger('click')
     });
     //slider
     $('.multiple-items').slick({
@@ -287,6 +333,9 @@
         autoplaySpeed: 2000,
 
     });
+    //  隐藏原有的按钮  
+    $('.slick-prev').css('opacity', '0');
+    $('.slick-next').css('opacity', '0');
     //imgzoom
     $(document).ready(function() {
 
@@ -299,9 +348,7 @@
         });
 
     });
-  //  隐藏原有的按钮
-    $('.slick-prev').css('opacity', '0');
-    $('.slick-next').css('opacity', '0');
+   
     </script>
 </body>
 
