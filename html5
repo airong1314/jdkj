@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>动画</title>
+    <link rel="stylesheet" type="text/css" href="http://chongqing.sinaimg.cn/images/hesg/css/animate.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="http://chongqing.sinaimg.cn/mobilecssjs/swiper.min.css">
+    <script src="http://chongqing.sinaimg.cn/mobilecssjs/flexible_css.js"></script>
+    <script src="http://chongqing.sinaimg.cn/mobilecssjs/flexible.js"></script>
+    <!-- Demo styles -->
+    <style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    .one,
+    .two {
+        width: 7.84375rem;
+        height: 8.78125rem;
+    }
+    
+    .hide {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="animated hide one" data-class="bounceIn" data-delay='1s' src="http://chongqing.sinaimg.cn/images/et12/chuangxingren/dd2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class="animated hide two" data-class="lightSpeedIn" data-delay="0.5s" src="http://chongqing.sinaimg.cn/images/Animal/a/i2.png" alt="">
+            </div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="http://chongqing.sinaimg.cn/mobilecssjs/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+~(function() {
+        var dom = {};
+        dom.hasClass = function hasClass(curEle, strClass) {
+            var reg = new RegExp("(^| +)" + strClass + "( +|$)");
+            return reg.test(curEle.className);
+        }
+        dom.addClass = function addClass(curEle, strClass) {
+            if (!this.hasClass(curEle, strClass)) {
+                curEle.className += " " + strClass;
+            }
+        }
+        dom.removeClass = function removeClass(curEle, strClass) {
+            var reg = new RegExp("(^| +)" + strClass + "( +|$)", "g");
+            if (this.hasClass(curEle, strClass)) {
+                curEle.className = curEle.className.replace(reg, " ");
+            }
+        };
+
+        var thisDiv = document.querySelectorAll('.swiper-slide')[0];
+        var cur = thisDiv.querySelectorAll('.animated');
+        for (var i = 0; i < cur.length; i++) {
+            dom.removeClass(cur[i], 'hide');
+            dom.addClass(cur[i], cur[i].dataset.class);
+            cur[i].style.animationDelay = cur[i].dataset.delay;
+        };
+        window.dom = dom;
+    }())
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        effect: 'fade',
+        onSlideChangeStart: function() {
+            var thisDiv = swiper.slides[swiper.activeIndex]
+            var cur = thisDiv.querySelectorAll('.animated');
+            for (var i = 0; i < cur.length; i++) {
+                dom.addClass(cur[i], 'hide');
+                dom.removeClass(cur[i], cur[i].dataset.class);
+            }
+        },
+        onSlideChangeEnd: function() {
+            var thisDiv = swiper.slides[swiper.activeIndex]
+            var cur = thisDiv.querySelectorAll('.animated');
+            for (var i = 0; i < cur.length; i++) {
+                dom.removeClass(cur[i], 'hide');
+                dom.addClass(cur[i], cur[i].dataset.class)
+                cur[i].style.animationDelay = cur[i].dataset.delay;
+
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>
